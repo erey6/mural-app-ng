@@ -1,0 +1,22 @@
+<div class="container">
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Year</th>
+        <th scope="col">Artwork Title</th>
+        <th scope="col">Artist</th>
+        <th scope="col">Zip</th>
+        <th scope="col">Ward</th>
+      </tr>
+    </thead>
+    <tbody *ngFor = "let list of listings; let i = index">
+      <tr *ngIf="i<50">
+        <th scope="row">{{list.year_installed}}</th>
+        <td>{{list.artwork_title}}</td>
+        <td>{{list.artist_credit}}</td>
+        <td>{{list.zip}}</td>
+        <td>{{list.ward}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
